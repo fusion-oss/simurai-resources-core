@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.scoperetail.pom</groupId>
+		<artifactId>oss-parent-pom</artifactId>
+		<version>1.6</version>
+		<relativePath />
+	</parent>
+	<groupId>com.scoperetail.simurai</groupId>
+	<artifactId>simurai-resources-core</artifactId>
+	<version>0.1-SNAPSHOT</version>
+	<name>${project.artifactId}</name>
+	<description>simurai resources core library</description>
+	<url>https://github.com/fusion-oss/${project.artifactId}</url>
+
+	<properties>
+	    <spring.boot.version>2.7.0</spring.boot.version>
+		<servlet-api.version>2.5</servlet-api.version>
+		<zt-zip.version>1.15</zt-zip.version>
+		<springdoc-openapi-ui.version>1.6.3</springdoc-openapi-ui.version>
+	</properties>
+
+	<scm>
+		<developerConnection>
+            scm:git:git@github.com:fusion-oss/${project.artifactId}.git
+        </developerConnection>
+		<tag>HEAD</tag>
+		<url>https://github.com/fusion-oss/${project.artifactId}</url>
+	</scm>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring.boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>${servlet-api.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.zeroturnaround</groupId>
+			<artifactId>zt-zip</artifactId>
+			<version>${zt-zip.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springdoc</groupId>
+			<artifactId>springdoc-openapi-ui</artifactId>
+			<version>${springdoc-openapi-ui.version}</version>
+		</dependency>
+	</dependencies>
+</project>
