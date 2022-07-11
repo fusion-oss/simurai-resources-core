@@ -9,7 +9,7 @@
 	</parent>
 	<groupId>com.scoperetail.simurai</groupId>
 	<artifactId>simurai-resources-core</artifactId>
-	<version>0.1-SNAPSHOT</version>
+	<version>0.1</version>
 	<name>${project.artifactId}</name>
 	<description>simurai resources core library</description>
 	<url>https://github.com/fusion-oss/${project.artifactId}</url>
@@ -25,7 +25,7 @@
 		<developerConnection>
             scm:git:git@github.com:fusion-oss/${project.artifactId}.git
         </developerConnection>
-		<tag>HEAD</tag>
+		<tag>simurai-resources-core-0.1</tag>
 		<url>https://github.com/fusion-oss/${project.artifactId}</url>
 	</scm>
 	<dependencyManagement>
